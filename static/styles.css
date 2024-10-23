@@ -1,0 +1,311 @@
+* {
+    font-family: 'Lucida Grande', Tahoma, Verdana, Arial, sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    cursor: pointer;
+    color: #3b5998;
+    text-decoration: none;
+    outline-style: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menubar {
+    display: flex;
+    width: 100%;
+    height: 84px;
+    background-color: #3b5998;
+    justify-content: center;
+}
+
+.menubar-items {
+    width: 964px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bluewire-logo {
+    margin: 16px 0 0 19px;
+}
+
+.content {
+    display: flex;
+    margin: 0;
+    padding-top: 35px;
+    background: transparent url(gradient.jpg) bottom center no-repeat;
+    background-size: 100% 100%;
+    height: 369px;
+    justify-content: center;
+}
+
+.content-area {
+    display: flex;
+    margin: 0 auto;
+    padding: 0 12px;
+    width: 964px;
+    position: relative;
+}
+
+.content-header {
+    margin: 0;
+    margin-top: 1px;
+    margin-left: 18px;
+    font-size: 20px !important;
+    line-height: 29px;
+    word-spacing: -1px;
+    color: #203360;
+    font-weight: bold; 
+}
+
+.content-map {
+    width: 537px;
+    height: 195px;
+    margin: 20px 0 0 1px;
+    background: transparent url(welcome_map.png) top left no-repeat !important;
+}
+
+.content-left {
+    float: left;
+    width: 536px;
+    padding-bottom: 20px;
+}
+
+.content-right {
+    width: 396px;
+    padding: 0;
+    float: right;
+}
+
+.sign-up-header {
+    margin-left: 20px;
+}
+
+.sign-up-headline, .sign-up-tagline {
+    font-size: 20px !important;
+    line-height: 29px;
+    word-spacing: -1px;
+    color: #203360;
+}
+
+.sign-up-headline {
+	font-weight: bold;
+}
+
+.sign-up-tagline {
+    padding-top: 1px;
+}
+
+#sign-up-content {
+    padding-left: 30px;
+    margin: 4px 0 0 15px;
+}
+
+#sign-up-content .sign-up-table {
+    margin: 0 0 7px 0;
+}
+
+#sign-up-content .label {
+    font-size: 11px;
+    color: #1d2a5b;
+    text-align: right;
+    padding-right: 3px;
+    width: 90px;
+}
+
+.field-container {
+    display: inline-block;
+    position: relative;
+    width: auto;
+}
+
+#sign-up-content .input-text, #sign-up-content .input-password {
+    width: 206px;
+    border: 1px solid #96a6c5;
+    margin-top: 2px;
+}
+
+.input-text, .input-password {
+    margin: 0;
+    padding-bottom: 5px;
+}
+
+#sign-up-content select {
+    margin: 2px 0 0 0;
+}
+
+select {
+    border: 1px solid #bdc7d8;
+    font-size: 11px;
+    padding: 2px;
+}
+
+#sign-up-content #provide-warning {
+    font-size: 9px;
+    margin-left: 1px;
+}
+
+#sign-up-content #provide-warning a {
+    text-decoration: none;
+    color: #3b5998;
+}
+
+.sign-up-button {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: normal !important;
+    padding: 3px 6px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    background-color: #69a74e;
+    border: 1px solid;
+    border-color: #3b6e22 #3b6e22 #2c5115;
+    color: #fff;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+    margin-bottom: 115px;
+	margin-left: 100px;
+}
+
+#footer {
+    color: #737373;
+    font-size: 11px;
+    margin: 0 auto;
+    width: 980px;
+}
+
+#footer-container {
+    border-top: 1px solid #eee;
+    margin-bottom: 30px;
+    padding: 8px;
+    position: relative;
+}
+
+#content-curve {
+    background-color: #fff;
+    border-bottom: 1px solid #b3b3b3;
+    height: 8px;
+    font-size: 1px;
+}
+
+.lfloat {
+    float: left;
+}
+
+.ui-text-subtitle {
+    line-height: 14px;
+    color: #808080;
+    font-size: 11px;
+}
+
+.rfloat {
+    float: right;
+}
+
+#footer a {
+    color: #385495;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.navbar-table {
+    text-align: right;
+    font-size: 11px;
+}
+
+.login-button {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: normal !important;
+    padding: 3px 6px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    background-color: #5b74a8;
+    border: 1px solid;
+    border-color: #29447e #29447e #1a356e;
+    color: #fff;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+}
+
+textarea, .input-text, .input-password {
+    border: 1px solid #bdc7d8;
+    font-size: 11px;
+    padding: 3px;
+}
+
+.navbar-table tr td {
+    padding-left: 12px;
+}
+
+input + label {
+    padding-left: 1px;
+    line-height: 14px;
+}
+
+.navbar-table .login-form-label-remember {
+    padding-top: 1px;
+}
+
+.input-checkbox {
+    border: 0;
+    vertical-align: middle;
+}
+
+.navbar-table label {
+    color: #98a9ca;
+    margin: 0;
+    font-weight: normal;
+}
+
+.navbar-table a, .navbar-table a:hover {
+    color: #98a9ca;
+}
+
+.welcome-useragent {
+    margin: 0 auto 0;
+    padding: 20px;
+    position: relative;
+    width: 964px;
+}
+
+.welcome-useragent .language ul {
+    display: inline;
+}
+
+.welcome-useragent .language li {
+    display: inline;
+    float: left;
+    direction: ltr;
+    font-size: 11px;
+    padding: 0 11px 0 0;
+    margin: 0;
+}
+
+.welcome-useragent .language a {
+    text-decoration: none;
+    color: #385495;
+}
+
+.welcome-useragent .language a:hover {
+    text-decoration: underline;
+}

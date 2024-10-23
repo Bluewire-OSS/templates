@@ -9,6 +9,8 @@ Feel free to explore and modify the templates as needed. However, please make su
 - **`templates/`**: Contains the HTML and CSS templates that Flask uses to display pages.
 - **`static/`**: Contains static assets such as image files.
 
+To run this, install Flask from pip and run **`app.py`**.
+
 ### License
 
 All modifications must adhere to the license provided. This ensures that any improvements or changes to the templates maintain the integrity of the project.
