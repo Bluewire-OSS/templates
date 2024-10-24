@@ -1,17 +1,19 @@
 * {
     font-family: 'Lucida Grande', Tahoma, Verdana, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
 
 a {
     cursor: pointer;
     color: #3b5998;
     text-decoration: none;
-    outline-style: none;
+    outline: none;
 }
 
 a:hover {
@@ -19,49 +21,44 @@ a:hover {
 }
 
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+    list-style: none;
 }
 
 .menubar {
     display: flex;
+    justify-content: center;
     width: 100%;
     height: 84px;
     background-color: #3b5998;
-    justify-content: center;
 }
 
 .menubar-items {
-    width: 964px;
-    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 964px;
+    height: 100%;
 }
 
 .bluewire-logo {
     margin: 16px 0 0 19px;
 }
 
-.content {
+.content,
+.content-pl {
     display: flex;
-    margin: 0;
+    justify-content: center;
     padding-top: 35px;
     background: transparent url(gradient.jpg) bottom center no-repeat;
     background-size: 100% 100%;
+}
+
+.content {
     height: 345px;
-    justify-content: center;
 }
 
 .content-pl {
-    display: flex;
-    margin: 0;
-    padding-top: 35px;
-    background: transparent url(gradient.jpg) bottom center no-repeat;
-    background-size: 100% 100%;
     height: 374px;
-    justify-content: center;
 }
 
 .content-area {
@@ -72,22 +69,32 @@ ul {
     position: relative;
 }
 
-.content-header {
+.content-header,
+.sign-up-headline {
     margin: 0;
     margin-top: 1px;
     margin-left: 18px;
-    font-size: 20px !important;
+    font-size: 20px;
     line-height: 29px;
-    word-spacing: -1px;
     color: #203360;
-    font-weight: bold; 
+    font-weight: bold;
+    word-spacing: -1px;
+}
+
+.sign-up-tagline {
+    font-size: 20px;
+    line-height: 29px;
+    margin-left: 18px;
+    color: #203360;
+    padding-top: 1px;
+    word-spacing: -1px;
 }
 
 .content-map {
     width: 537px;
     height: 195px;
     margin: 20px 0 0 1px;
-    background: transparent url(welcome_map.png) top left no-repeat !important;
+    background: transparent url(welcome_map.png) top left no-repeat;
 }
 
 .content-left {
@@ -97,28 +104,13 @@ ul {
 }
 
 .content-right {
+    float: right;
     width: 396px;
     padding: 0;
-    float: right;
 }
 
 .sign-up-header {
     margin-left: 20px;
-}
-
-.sign-up-headline, .sign-up-tagline {
-    font-size: 20px !important;
-    line-height: 29px;
-    word-spacing: -1px;
-    color: #203360;
-}
-
-.sign-up-headline {
-	font-weight: bold;
-}
-
-.sign-up-tagline {
-    padding-top: 1px;
 }
 
 #sign-up-content {
@@ -127,7 +119,7 @@ ul {
 }
 
 #sign-up-content .sign-up-table {
-    margin: 0 0 7px 0;
+    margin-bottom: 7px;
 }
 
 #sign-up-content .label {
@@ -141,25 +133,23 @@ ul {
 .field-container {
     display: inline-block;
     position: relative;
-    width: auto;
 }
 
-#sign-up-content .input-text, #sign-up-content .input-password {
+#sign-up-content .input-text,
+#sign-up-content .input-password {
     width: 206px;
     border: 1px solid #96a6c5;
     margin-top: 2px;
 }
 
-.input-text, .input-password {
+.input-text,
+.input-password {
     margin: 0;
     padding-bottom: 5px;
 }
 
 #sign-up-content select {
-    margin: 2px 0 0 0;
-}
-
-select {
+    margin-top: 2px;
     border: 1px solid #bdc7d8;
     font-size: 11px;
     padding: 2px;
@@ -171,8 +161,8 @@ select {
 }
 
 #sign-up-content #provide-warning a {
-    text-decoration: none;
     color: #3b5998;
+    text-decoration: none;
 }
 
 .sign-up-button {
@@ -180,18 +170,15 @@ select {
     display: inline-block;
     font-size: 11px;
     font-weight: bold;
-    line-height: normal !important;
     padding: 3px 6px;
     text-align: center;
-    vertical-align: middle;
-    white-space: nowrap;
     background-color: #69a74e;
-    border: 1px solid;
-    border-color: #3b6e22 #3b6e22 #2c5115;
+    border: 1px solid #3b6e22;
+    border-color: #3b6e22 #2c5115;
     color: #fff;
     box-shadow: 0 1px 0 rgba(0, 0, 0, .1);
     margin-bottom: 115px;
-	margin-left: 100px;
+    margin-left: 100px;
 }
 
 #footer {
@@ -238,6 +225,12 @@ select {
 .navbar-table {
     text-align: right;
     font-size: 11px;
+    padding-top: 10px;
+    padding-right: 20px;
+}
+
+.navbar-table tr td {
+    padding-left: 12px;
 }
 
 .login-button {
@@ -245,27 +238,22 @@ select {
     display: inline-block;
     font-size: 11px;
     font-weight: bold;
-    line-height: normal !important;
     padding: 3px 6px;
     text-align: center;
-    vertical-align: middle;
-    white-space: nowrap;
     background-color: #5b74a8;
-    border: 1px solid;
-    border-color: #29447e #29447e #1a356e;
+    border: 1px solid #29447e;
+    border-color: #29447e #1a356e;
     color: #fff;
     box-shadow: 0 1px 0 rgba(0, 0, 0, .1);
 }
 
-textarea, .input-text, .input-password {
+textarea,
+.input-text,
+.input-password {
     border: 1px solid #bdc7d8;
     font-size: 11px;
     width: 147px;
     padding: 3px;
-}
-
-.navbar-table tr td {
-    padding-left: 12px;
 }
 
 input + label {
@@ -275,11 +263,6 @@ input + label {
 
 .navbar-table .login-form-label-remember {
     padding-top: 1px;
-}
-
-.navbar-table {
-    padding-top: 10px;
-    padding-right: 20px;
 }
 
 .input-checkbox {
@@ -293,15 +276,19 @@ input + label {
     font-weight: normal;
 }
 
-.navbar-table a, .navbar-table a:hover {
+.navbar-table a {
+    color: #98a9ca;
+}
+
+.navbar-table a:hover {
     color: #98a9ca;
 }
 
 .welcome-useragent {
-    margin: 0 auto 0;
+    margin: 0 auto;
     padding: 20px;
-    position: relative;
     width: 964px;
+    position: relative;
 }
 
 .welcome-useragent .language ul {
@@ -311,15 +298,13 @@ input + label {
 .welcome-useragent .language li {
     display: inline;
     float: left;
-    direction: ltr;
     font-size: 11px;
-    padding: 0 11px 0 0;
-    margin: 0;
+    padding-right: 11px;
 }
 
 .welcome-useragent .language a {
-    text-decoration: none;
     color: #385495;
+    text-decoration: none;
 }
 
 .welcome-useragent .language a:hover {
