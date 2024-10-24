@@ -14,5 +14,9 @@ def polish():
 def ukrainian():
     return render_template('index-ua.html')
 
+@app.route('/ro')
+def romanian():
+    return render_template('index-ro.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
