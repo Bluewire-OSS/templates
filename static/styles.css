@@ -54,6 +54,16 @@ ul {
     justify-content: center;
 }
 
+.content-pl {
+    display: flex;
+    margin: 0;
+    padding-top: 35px;
+    background: transparent url(gradient.jpg) bottom center no-repeat;
+    background-size: 100% 100%;
+    height: 374px;
+    justify-content: center;
+}
+
 .content-area {
     display: flex;
     margin: 0 auto;
