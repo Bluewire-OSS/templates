@@ -6,8 +6,8 @@ Feel free to explore and modify the templates as needed. However, please make su
 
 ## Structure
 
-- **`templates/`**: Contains the HTML and CSS templates that Flask uses to display pages.
-- **`static/`**: Contains static assets such as image files.
+- **`templates/`**: Contains the HTML templates that Flask uses to display pages.
+- **`static/`**: Contains static assets such as image files, CSS etc.
 
 To run this, install Flask from pip and run **`app.py`**.
 
