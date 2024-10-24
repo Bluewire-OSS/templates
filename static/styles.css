@@ -250,6 +250,7 @@ select {
 textarea, .input-text, .input-password {
     border: 1px solid #bdc7d8;
     font-size: 11px;
+    width: 150px;
     padding: 3px;
 }
 
@@ -264,6 +265,10 @@ input + label {
 
 .navbar-table .login-form-label-remember {
     padding-top: 1px;
+}
+
+.navbar-table {
+    padding-top: 10px;
 }
 
 .input-checkbox {
