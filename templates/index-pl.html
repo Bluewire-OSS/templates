@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='bluewire-favicon.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Welcome to Bluewire</title>
+</head>
+<body>
+    <div class="menubar">
+        <div class="menubar-items">
+            <img src="{{ url_for('static', filename='bluewire-string-logo.svg') }}" alt="Bluewire Logo" class="bluewire-logo">
+            <table cellpadding="0" cellspacing="0" class="navbar-table">
+                <tbody>
+                    <tr>
+                        <td class="login-form-label-field login-form-label-remember">
+                            <input type="checkbox" class="input-checkbox" value="1" id="persistent" name="persistent" tabindex="3">
+                            <label id="label-persistent" for="persistent">Keep me logged in</label>
+                        </td>
+                        <td class="login-form-label-field">
+                            <a href="/reset_password">Forgot your password?</a>
+                        </td>
+                        <td class="login-form-last-field login-form-label-field"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" class="input-text" title="Email" placeholder="Email" id="email" name="email" tabindex="1">
+                        </td>
+                        <td>
+                            <input type="password" class="input-password" id="pass" name="pass" value="" tabindex="2">
+                        </td>
+                        <td class="login-form-last-field">
+                            <div class="inner">
+                                <button class="login-button">Login</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>                  
+        </div>
+    </div>
+    <div class="content">
+        <div class="content-area">
+            <div class="content-left">
+                <h3 class="content-header">Bluewire helps you connect and share with<br>the people in your life.</h3>
+                <div class="content-map"></div>
+            </div>
+            <div class="content-right">
+                <div class="sign-up-header">
+                    <div class="sign-up-headline">Sign Up</div>
+                    <div class="sign-up-tagline">It's free and anyone can join</div>
+                </div>
+                <div id="sign-up-content">
+                    <form id="sign-up-form">
+                        <table class="sign-up-table">
+                            <tbody>
+                                <tr>
+                                    <td class="label"><label for="firstname">First Name:</label></td>
+                                    <td>
+                                        <div class="field-container">
+                                            <input type="text" class="input-text" id="firstname" name="firstname" value="" required>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="label"><label for="lastname">Last Name:</label></td>
+                                    <td>
+                                        <div class="field-container">
+                                            <input type="text" class="input-text" id="lastname" name="lastname" value="" required>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="label"><label for="reg-email">Your Email:</label></td>
+                                    <td>
+                                        <div class="field-container">
+                                            <input type="email" class="input-text" id="reg-email" name="reg-email" value="" required>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="label"><label for="reg-passwd">New Password:</label></td>
+                                    <td>
+                                        <div class="field-container">
+                                            <input type="password" class="input-password" id="reg-passwd" name="reg-passwd" value="" required>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="label"><label for="sex">I am:</label></td>
+                                    <td>
+                                        <div class="field-container">
+                                            <select class="select" name="sex" id="sex" required>
+                                                <option value="0">Select Sex:</option>
+                                                <option value="1">Female</option>
+                                                <option value="2">Male</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="label"><label for="birthday-month">Birthday:</label></td>
+                                    <td>
+                                        <div class="field-container">
+                                            <select id="birthday-month" name="birthday-month" required>
+                                                <!-- Dynamically filled in -->
+                                            </select>
+                                            <select id="birthday-day" name="birthday-day" required>
+                                                <!-- Dynamically filled in -->
+                                            </select>
+                                            <select id="birthday-year" name="birthday-year" required>
+                                                <!-- Dynamically filled in -->
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>
+                                        <div id="provide-warning">
+                                            <a href="#" title="Click for more information" rel="dialog">Why do I need to provide this?</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <input type="hidden" id="referrer" name="referrer" value="116">
+                        <input type="hidden" id="md5pass" name="md5pass" value="">
+                        <div class="reg-btn clearfix">
+                            <button type="submit" class="sign-up-button">Sign Up</button>
+                        </div>
+                    </form>
+                </div>                   
+            </div>
+        </div>
+    </div>
+    <div class="welcome-useragent">
+        <div class="language">
+            <ul>
+                <li><a href="/">English (US)</a></li>
+                <li><a href="/pl">Polski (PL)</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div id="content-curve"></div>
+        <div class="clearfix" id="footer-container">
+            <div class="lfloat">
+                <div class="ui-text-subtitle">
+                    <span> Bluewire · This is a fan-made project and is not affiliated with Facebook.</span>
+                </div>
+            </div>
+            <div class="ui-text-subtitle rfloat">
+                <a href="#" title="Experience Bluewire on the go.">Mobile</a> · <a href="#" title="About Bluewire">About</a> · <a href="#" title="Bluewire TOS">Terms</a> · <a href="#" title="Bluewire Privacy">Privacy</a> · <a href="#" title="Contact Bluewire">Contact</a> · <a href="" title="Put your Bluewire profile on your website!">Badges</a> · <a href="https://github.com/Bluewire-OSS" title="Bluewire's GitHub">GitHub</a> · <a href="https://discord.gg/EagXk2Pcfd" title="Bluewire's Discord">Discord</a>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function isDocumentReady() {
+        return document.readyState === "complete" || document.readyState === "interactive";
+    }
+
+    function onDocumentReady() {
+        var monthSelect = document.getElementById('birthday-month');
+        var daySelect = document.getElementById('birthday-day');
+        var yearSelect = document.getElementById('birthday-year');
+
+        var defaultMonthOption = document.createElement('option');
+        defaultMonthOption.value = "";
+        defaultMonthOption.text = "Month:";
+        monthSelect.appendChild(defaultMonthOption);
+
+        var defaultDayOption = document.createElement('option');
+        defaultDayOption.value = "";
+        defaultDayOption.text = "Day:";
+        daySelect.appendChild(defaultDayOption);
+
+        var defaultYearOption = document.createElement('option');
+        defaultYearOption.value = "";
+        defaultYearOption.text = "Year:";
+        yearSelect.appendChild(defaultYearOption);
+
+        var months = [
+            "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+            "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+        ];
+
+
+        for (var index = 0; index < months.length; index++) {
+            var option = document.createElement('option');
+            option.value = index + 1;
+            option.text = months[index];
+            monthSelect.appendChild(option);
+        }
+
+        for (var day = 1; day <= 31; day++) {
+            var option = document.createElement('option');
+            option.value = day;
+            option.text = day;
+            daySelect.appendChild(option);
+        }
+
+        var currentYear = new Date().getFullYear();
+        for (var year = currentYear; year >= 1905; year--) {
+            var option = document.createElement('option');
+            option.value = year;
+            option.text = year;
+            yearSelect.appendChild(option);
+        }
+    }
+
+    if (isDocumentReady()) {
+        onDocumentReady();
+    } else {
+        document.addEventListener("DOMContentLoaded", onDocumentReady);
+    }
+</script>
+</html>
