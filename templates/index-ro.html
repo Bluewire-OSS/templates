@@ -103,13 +103,13 @@
                                     <td class="label"><label for="birthday-month">Ziua de naștere:</label></td>
                                     <td>
                                         <div class="field-container">
+                                            <select id="birthday-day" name="ziua" required>
+                                                <!-- Dynamically filled in -->
+                                            </select>
                                             <select id="birthday-month" name="luna" required>
                                                 <!-- Dynamically filled in -->
                                             </select>
-                                            <select id="birthday-day" name="zi" required>
-                                                <!-- Dynamically filled in -->
-                                            </select>
-                                            <select id="birthday-year" name="an" required>
+                                            <select id="birthday-year" name="anul" required>
                                                 <!-- Dynamically filled in -->
                                             </select>
                                         </div>
@@ -161,64 +161,44 @@
         </div>
     </div>
 </body>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
 <script>
-    function isDocumentReady() {
-        return document.readyState === "complete" || document.readyState === "interactive";
-    }
+    var monthSelect = document.getElementById('birthday-month');
+    var daySelect = document.getElementById('birthday-day');
+    var yearSelect = document.getElementById('birthday-year');
 
-    function onDocumentReady() {
-        var monthSelect = document.getElementById('birthday-month');
-        var daySelect = document.getElementById('birthday-day');
-        var yearSelect = document.getElementById('birthday-year');
-
-        var defaultMonthOption = document.createElement('option');
-        defaultMonthOption.value = "";
-        defaultMonthOption.text = "Luna:";
-        monthSelect.appendChild(defaultMonthOption);
-
-        var defaultDayOption = document.createElement('option');
-        defaultDayOption.value = "";
-        defaultDayOption.text = "Zi:";
-        daySelect.appendChild(defaultDayOption);
-
-        var defaultYearOption = document.createElement('option');
-        defaultYearOption.value = "";
-        defaultYearOption.text = "An:";
-        yearSelect.appendChild(defaultYearOption);
-
-        var months = [
-            "Ian", "Feb", "Mar", "Apr", "Mai", "Iun",
-            "Iul", "Aug", "Sept", "Oct", "Nov", "Dec"
-        ];
-
-
-        for (var index = 0; index < months.length; index++) {
-            var option = document.createElement('option');
-            option.value = index + 1;
-            option.text = months[index];
-            monthSelect.appendChild(option);
-        }
-
-        for (var day = 1; day <= 31; day++) {
-            var option = document.createElement('option');
-            option.value = day;
-            option.text = day;
-            daySelect.appendChild(option);
-        }
-
-        var currentYear = new Date().getFullYear();
-        for (var year = currentYear; year >= 1905; year--) {
-            var option = document.createElement('option');
-            option.value = year;
-            option.text = year;
-            yearSelect.appendChild(option);
+    for (var i = 0; i < monthSelect.options.length; i++) {
+        if (monthSelect.options[i].value === "") {
+            monthSelect.remove(i);
+            break;
         }
     }
 
-    if (isDocumentReady()) {
-        onDocumentReady();
-    } else {
-        document.addEventListener("DOMContentLoaded", onDocumentReady);
+    var defaultMonthOption = document.createElement('option');
+    defaultMonthOption.value = "";
+    defaultMonthOption.text = "Luna:";
+    monthSelect.appendChild(defaultMonthOption);
+
+    var defaultDayOption = document.createElement('option');
+    defaultDayOption.value = "";
+    defaultDayOption.text = "Ziua:";
+    daySelect.appendChild(defaultDayOption);
+
+    var defaultYearOption = document.createElement('option');
+    defaultYearOption.value = "";
+    defaultYearOption.text = "Anul:";
+    yearSelect.appendChild(defaultYearOption);
+
+    var months = [
+            "ianuarie", "februarie", "martie", "aprilie", "mai", "iunie",
+            "iulie", "august", "septembrie", "octombrie", "noiembrie", "decembrie"
+    ];
+
+    for (var index = 0; index < months.length; index++) {
+        var option = document.createElement('option');
+        option.value = index + 1;
+        option.text = months[index];
+        monthSelect.appendChild(option);
     }
 </script>
 </html>

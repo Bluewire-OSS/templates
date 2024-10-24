@@ -160,64 +160,44 @@
         </div>
     </div>
 </body>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
 <script>
-    function isDocumentReady() {
-        return document.readyState === "complete" || document.readyState === "interactive";
+    var monthSelect = document.getElementById('birthday-month');
+    var daySelect = document.getElementById('birthday-day');
+    var yearSelect = document.getElementById('birthday-year');
+
+    for (var i = 0; i < monthSelect.options.length; i++) {
+        if (monthSelect.options[i].value === "") {
+            monthSelect.remove(i);
+            break;
+        }
     }
 
-    function onDocumentReady() {
-        var monthSelect = document.getElementById('birthday-month');
-        var daySelect = document.getElementById('birthday-day');
-        var yearSelect = document.getElementById('birthday-year');
+    var defaultMonthOption = document.createElement('option');
+    defaultMonthOption.value = "";
+    defaultMonthOption.text = "Місяць:";
+    monthSelect.appendChild(defaultMonthOption);
 
-        var defaultMonthOption = document.createElement('option');
-        defaultMonthOption.value = "";
-        defaultMonthOption.text = "Місяць:";
-        monthSelect.appendChild(defaultMonthOption);
+    var defaultDayOption = document.createElement('option');
+    defaultDayOption.value = "";
+    defaultDayOption.text = "День:";
+    daySelect.appendChild(defaultDayOption);
 
-        var defaultDayOption = document.createElement('option');
-        defaultDayOption.value = "";
-        defaultDayOption.text = "День:";
-        daySelect.appendChild(defaultDayOption);
+    var defaultYearOption = document.createElement('option');
+    defaultYearOption.value = "";
+    defaultYearOption.text = "Рік:";
+    yearSelect.appendChild(defaultYearOption);
 
-        var defaultYearOption = document.createElement('option');
-        defaultYearOption.value = "";
-        defaultYearOption.text = "Рік:";
-        yearSelect.appendChild(defaultYearOption);
-
-        var months = [
+    var months = [
             "Січ", "Лют", "Бер", "Кві", "Тра", "Чер",
             "Лип", "Сер", "Вер", "Жов", "Лис", "Гру"
-        ];
+    ];
 
-
-        for (var index = 0; index < months.length; index++) {
-            var option = document.createElement('option');
-            option.value = index + 1;
-            option.text = months[index];
-            monthSelect.appendChild(option);
-        }
-
-        for (var day = 1; day <= 31; day++) {
-            var option = document.createElement('option');
-            option.value = day;
-            option.text = day;
-            daySelect.appendChild(option);
-        }
-
-        var currentYear = new Date().getFullYear();
-        for (var year = currentYear; year >= 1905; year--) {
-            var option = document.createElement('option');
-            option.value = year;
-            option.text = year;
-            yearSelect.appendChild(option);
-        }
-    }
-
-    if (isDocumentReady()) {
-        onDocumentReady();
-    } else {
-        document.addEventListener("DOMContentLoaded", onDocumentReady);
+    for (var index = 0; index < months.length; index++) {
+        var option = document.createElement('option');
+        option.value = index + 1;
+        option.text = months[index];
+        monthSelect.appendChild(option);
     }
 </script>
 </html>
