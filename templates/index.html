@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='bluewire-favicon.png') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <title>Welcome to Bluewire</title>
+    <title>Bienvenido a Bluewire</title>
 </head>
 <body>
     <div class="menubar">
@@ -16,10 +16,10 @@
                     <tr>
                         <td class="login-form-label-field login-form-label-remember">
                             <input type="checkbox" class="input-checkbox" value="1" id="persistent" name="persistent" tabindex="3">
-                            <label id="label-persistent" for="persistent">Keep me logged in</label>
+                            <label id="label-persistent" for="persistent">No cerrar sesión</label>
                         </td>
                         <td class="login-form-label-field">
-                            <a href="/reset_password">Forgot your password?</a>
+                            <a href="/reset_password">¿Has olvidado tu contraseña?</a>
                         </td>
                         <td class="login-form-last-field login-form-label-field"></td>
                     </tr>
@@ -32,7 +32,7 @@
                         </td>
                         <td class="login-form-last-field">
                             <div class="inner">
-                                <button class="login-button">Login</button>
+                                <button class="login-button">Entrar</button>
                             </div>
                         </td>
                     </tr>
@@ -43,20 +43,20 @@
     <div class="content">
         <div class="content-area">
             <div class="content-left">
-                <h3 class="content-header">Bluewire helps you connect and share with<br>the people in your life.</h3>
+                <h3 class="content-header">Bluewire te ayuda a comunicarte y compartir con<br>las personas que conoces.</h3>
                 <div class="content-map"></div>
             </div>
             <div class="content-right">
                 <div class="sign-up-header">
-                    <div class="sign-up-headline">Sign Up</div>
-                    <div class="sign-up-tagline">It's free and anyone can join</div>
+                    <div class="sign-up-headline">Regístrate</div>
+                    <div class="sign-up-tagline">Es gratis y cualquiera puede unirse.</div>
                 </div>
                 <div id="sign-up-content">
                     <form id="sign-up-form">
                         <table class="sign-up-table">
                             <tbody>
                                 <tr>
-                                    <td class="label"><label for="firstname">First Name:</label></td>
+                                    <td class="label"><label for="firstname">Nombre:</label></td>
                                     <td>
                                         <div class="field-container">
                                             <input type="text" class="input-text" id="firstname" name="firstname" value="" required>
@@ -64,7 +64,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="label"><label for="lastname">Last Name:</label></td>
+                                    <td class="label"><label for="lastname">Apellidos:</label></td>
                                     <td>
                                         <div class="field-container">
                                             <input type="text" class="input-text" id="lastname" name="lastname" value="" required>
@@ -72,7 +72,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="label"><label for="reg-email">Your Email:</label></td>
+                                    <td class="label"><label for="reg-email">Dirección de correo electrónico:</label></td>
                                     <td>
                                         <div class="field-container">
                                             <input type="email" class="input-text" id="reg-email" name="reg-email" value="" required>
@@ -80,7 +80,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="label"><label for="reg-passwd">New Password:</label></td>
+                                    <td class="label"><label for="reg-passwd">Contraseña nueva:</label></td>
                                     <td>
                                         <div class="field-container">
                                             <input type="password" class="input-password" id="reg-passwd" name="reg-passwd" value="" required>
@@ -88,13 +88,13 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="label"><label for="sex">I am:</label></td>
+                                    <td class="label"><label for="sex">Sexo:</label></td>
                                     <td>
                                         <div class="field-container">
                                             <select class="select" name="sex" id="sex" required>
-                                                <option value="0">Select Sex:</option>
-                                                <option value="1">Female</option>
-                                                <option value="2">Male</option>
+                                                <option value="0">Selecciona el sexo:</option>
+                                                <option value="1">Mujer</option>
+                                                <option value="2">Hombre</option>
                                             </select>
                                         </div>
                                     </td>
@@ -119,7 +119,7 @@
                                     <td></td>
                                     <td>
                                         <div id="provide-warning">
-                                            <a href="#" title="Click for more information" rel="dialog">Why do I need to provide this?</a>
+                                            <a href="#" title="Click for more information" rel="dialog">¿Por qué debo proporcionar esta información?</a>
                                         </div>
                                     </td>
                                 </tr>
@@ -128,7 +128,7 @@
                         <input type="hidden" id="referrer" name="referrer" value="116">
                         <input type="hidden" id="md5pass" name="md5pass" value="">
                         <div class="reg-btn clearfix">
-                            <button type="submit" class="sign-up-button">Sign Up</button>
+                            <button type="submit" class="sign-up-button">Regístrate</button>
                         </div>
                     </form>
                 </div>                   
@@ -190,8 +190,8 @@
     yearSelect.appendChild(defaultYearOption);
 
     var months = [
-            "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-            "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"
+            "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+            "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
     ];
 
     for (var index = 0; index < months.length; index++) {
