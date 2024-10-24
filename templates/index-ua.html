@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='bluewire-favicon.png') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <title>Welcome to Bluewire</title>
+    <title>Ласкаво просимо до Bluewire</title>
 </head>
 <body>
     <div class="menubar">
@@ -16,16 +16,16 @@
                     <tr>
                         <td class="login-form-label-field login-form-label-remember">
                             <input type="checkbox" class="input-checkbox" value="1" id="persistent" name="persistent" tabindex="3">
-                            <label id="label-persistent" for="persistent">Keep me logged in</label>
+                            <label id="label-persistent" for="persistent">Пам'ятати мене</label>
                         </td>
                         <td class="login-form-label-field">
-                            <a href="/reset_password">Forgot your password?</a>
+                            <a href="/reset_password">Забули свій пароль?</a>
                         </td>
                         <td class="login-form-last-field login-form-label-field"></td>
                     </tr>
                     <tr>
                         <td>
-                            <input type="text" class="input-text" title="Email" placeholder="Email" id="email" name="email" tabindex="1">
+                            <input type="text" class="input-text" title="Email" placeholder="Електронна пошта" id="email" name="email" tabindex="1">
                         </td>
                         <td>
                             <input type="password" class="input-password" id="pass" name="pass" value="" tabindex="2">
@@ -43,20 +43,20 @@
     <div class="content">
         <div class="content-area">
             <div class="content-left">
-                <h3 class="content-header">Bluewire helps you connect and share with<br>the people in your life.</h3>
+                <h3 class="content-header">Bluewire допомагає тримати зв'язок з<br> рідними та близькими.</h3>
                 <div class="content-map"></div>
             </div>
             <div class="content-right">
                 <div class="sign-up-header">
-                    <div class="sign-up-headline">Sign Up</div>
-                    <div class="sign-up-tagline">It's free and anyone can join</div>
+                    <div class="sign-up-headline">Зареєструватися</div>
+                    <div class="sign-up-tagline">Це безкоштовно і кожен може приєднатися</div>
                 </div>
                 <div id="sign-up-content">
                     <form id="sign-up-form">
                         <table class="sign-up-table">
                             <tbody>
                                 <tr>
-                                    <td class="label"><label for="firstname">First Name:</label></td>
+                                    <td class="label"><label for="firstname">Ім'я:</label></td>
                                     <td>
                                         <div class="field-container">
                                             <input type="text" class="input-text" id="firstname" name="firstname" value="" required>
@@ -64,7 +64,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="label"><label for="lastname">Last Name:</label></td>
+                                    <td class="label"><label for="lastname">Прізвище:</label></td>
                                     <td>
                                         <div class="field-container">
                                             <input type="text" class="input-text" id="lastname" name="lastname" value="" required>
@@ -72,7 +72,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="label"><label for="reg-email">Your Email:</label></td>
+                                    <td class="label"><label for="reg-email">Ваша електронна пошта:</label></td>
                                     <td>
                                         <div class="field-container">
                                             <input type="email" class="input-text" id="reg-email" name="reg-email" value="" required>
@@ -80,7 +80,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="label"><label for="reg-passwd">New Password:</label></td>
+                                    <td class="label"><label for="reg-passwd">Новий пароль:</label></td>
                                     <td>
                                         <div class="field-container">
                                             <input type="password" class="input-password" id="reg-passwd" name="reg-passwd" value="" required>
@@ -88,25 +88,25 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="label"><label for="sex">I am:</label></td>
+                                    <td class="label"><label for="sex">Стать:</label></td>
                                     <td>
                                         <div class="field-container">
                                             <select class="select" name="sex" id="sex" required>
-                                                <option value="0">Select Sex:</option>
-                                                <option value="1">Female</option>
-                                                <option value="2">Male</option>
+                                                <option value="0">Оберіть стать:</option>
+                                                <option value="1">жінка</option>
+                                                <option value="2">чоловік</option>
                                             </select>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="label"><label for="birthday-month">Birthday:</label></td>
+                                    <td class="label"><label for="birthday-month">День народження:</label></td>
                                     <td>
                                         <div class="field-container">
-                                            <select id="birthday-month" name="birthday-month" required>
+                                            <select id="birthday-day" name="birthday-day" required>
                                                 <!-- Dynamically filled in -->
                                             </select>
-                                            <select id="birthday-day" name="birthday-day" required>
+                                            <select id="birthday-month" name="birthday-month" required>
                                                 <!-- Dynamically filled in -->
                                             </select>
                                             <select id="birthday-year" name="birthday-year" required>
@@ -119,7 +119,7 @@
                                     <td></td>
                                     <td>
                                         <div id="provide-warning">
-                                            <a href="#" title="Click for more information" rel="dialog">Why do I need to provide this?</a>
+                                            <a href="#" title="Click for more information" rel="dialog">Чому я маю це повідомляти?</a>
                                         </div>
                                     </td>
                                 </tr>
@@ -128,7 +128,7 @@
                         <input type="hidden" id="referrer" name="referrer" value="116">
                         <input type="hidden" id="md5pass" name="md5pass" value="">
                         <div class="reg-btn clearfix">
-                            <button type="submit" class="sign-up-button">Sign Up</button>
+                            <button type="submit" class="sign-up-button">Зареєструватися</button>
                         </div>
                     </form>
                 </div>                   
@@ -141,7 +141,6 @@
                 <li><a href="/">English (US)</a></li>
                 <li><a href="/pl">Polski (PL)</a></li>
                 <li><a href="/ua">Українська (UA)</a></li>
-
             </ul>
         </div>
     </div>
@@ -151,11 +150,11 @@
         <div class="clearfix" id="footer-container">
             <div class="lfloat">
                 <div class="ui-text-subtitle">
-                    <span> Bluewire · This is a fan-made project and is not affiliated with Facebook.</span>
+                    <span>Bluewire - це проект, створений фанатами, і не має відношення до Facebook.</span>
                 </div>
             </div>
             <div class="ui-text-subtitle rfloat">
-                <a href="#" title="Experience Bluewire on the go.">Mobile</a> · <a href="#" title="About Bluewire">About</a> · <a href="#" title="Bluewire TOS">Terms</a> · <a href="#" title="Bluewire Privacy">Privacy</a> · <a href="#" title="Contact Bluewire">Contact</a> · <a href="" title="Put your Bluewire profile on your website!">Badges</a> · <a href="https://github.com/Bluewire-OSS" title="Bluewire's GitHub">GitHub</a> · <a href="https://discord.gg/EagXk2Pcfd" title="Bluewire's Discord">Discord</a>
+                <a href="#" title="Користуйтеся Bluewire на ходу.">Мобільний</a> · <a href="#" title="Про Bluewire">Про нас</a> · <a href="#" title="Умови використання Bluewire">Умови використання</a> · <a href="#" title="">Конфіденційність</a> · <a href="#" title="Зверніться до Bluewire">Зв'язок з нами</a> · <a href="" title="Розмістіть свій профіль Bluewire на своєму сайті!">Значки</a> · <a href="https://github.com/Bluewire-OSS" title="Bluewire's GitHub">GitHub</a> · <a href="https://discord.gg/EagXk2Pcfd" title="Bluewire's Discord">Discord</a>
             </div>
         </div>
     </div>
