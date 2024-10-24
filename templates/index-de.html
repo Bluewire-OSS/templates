@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='bluewire-favicon.png') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <title>Welcome to Bluewire</title>
+    <title>Willkommen bei Bluewire!</title>
 </head>
 <body>
     <div class="menubar">
@@ -16,10 +16,10 @@
                     <tr>
                         <td class="login-form-label-field login-form-label-remember">
                             <input type="checkbox" class="input-checkbox" value="1" id="persistent" name="persistent" tabindex="3">
-                            <label id="label-persistent" for="persistent">Keep me logged in</label>
+                            <label id="label-persistent" for="persistent">Angemeldet bleiben</label>
                         </td>
                         <td class="login-form-label-field">
-                            <a href="/reset_password">Forgot your password?</a>
+                            <a href="/reset_password">Passwort vergessen?</a>
                         </td>
                         <td class="login-form-last-field login-form-label-field"></td>
                     </tr>
@@ -32,7 +32,7 @@
                         </td>
                         <td class="login-form-last-field">
                             <div class="inner">
-                                <button class="login-button">Login</button>
+                                <button class="login-button">Einloggen</button>
                             </div>
                         </td>
                     </tr>
@@ -43,20 +43,20 @@
     <div class="content">
         <div class="content-area">
             <div class="content-left">
-                <h3 class="content-header">Bluewire helps you connect and share with<br>the people in your life.</h3>
+                <h3 class="content-header">Bluewire ermöglicht es dir, mit deinen Freunden in Kontakt<br>zu bleiben und Inhalte mit ihnen<br>zu teilen.</h3>
                 <div class="content-map"></div>
             </div>
             <div class="content-right">
                 <div class="sign-up-header">
-                    <div class="sign-up-headline">Sign Up</div>
-                    <div class="sign-up-tagline">It's free and anyone can join</div>
+                    <div class="sign-up-headline">Registrieren</div>
+                    <div class="sign-up-tagline">Es ist kostenlos und jeder kann beitreten!</div>
                 </div>
                 <div id="sign-up-content">
                     <form id="sign-up-form">
                         <table class="sign-up-table">
                             <tbody>
                                 <tr>
-                                    <td class="label"><label for="firstname">First Name:</label></td>
+                                    <td class="label"><label for="firstname">Vorname:</label></td>
                                     <td>
                                         <div class="field-container">
                                             <input type="text" class="input-text" id="firstname" name="firstname" value="" required>
@@ -64,7 +64,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="label"><label for="lastname">Last Name:</label></td>
+                                    <td class="label"><label for="lastname">Nachname:</label></td>
                                     <td>
                                         <div class="field-container">
                                             <input type="text" class="input-text" id="lastname" name="lastname" value="" required>
@@ -72,7 +72,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="label"><label for="reg-email">Your Email:</label></td>
+                                    <td class="label"><label for="reg-email">E-Mail-Adresse:</label></td>
                                     <td>
                                         <div class="field-container">
                                             <input type="email" class="input-text" id="reg-email" name="reg-email" value="" required>
@@ -80,7 +80,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="label"><label for="reg-passwd">New Password:</label></td>
+                                    <td class="label"><label for="reg-passwd">Neues Passwort:</label></td>
                                     <td>
                                         <div class="field-container">
                                             <input type="password" class="input-password" id="reg-passwd" name="reg-passwd" value="" required>
@@ -88,19 +88,19 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="label"><label for="sex">I am:</label></td>
+                                    <td class="label"><label for="sex">Ich bin:</label></td>
                                     <td>
                                         <div class="field-container">
                                             <select class="select" name="sex" id="sex" required>
-                                                <option value="0">Select Sex:</option>
-                                                <option value="1">Female</option>
-                                                <option value="2">Male</option>
+                                                <option value="0">Wähle dein Geschlecht:</option>
+                                                <option value="1">Weiblich</option>
+                                                <option value="2">Männlich</option>
                                             </select>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="label"><label for="birthday-month">Birthday:</label></td>
+                                    <td class="label"><label for="birthday-month">Geburtstag:</label></td>
                                     <td>
                                         <div class="field-container">
                                             <select id="birthday-month" name="birthday-month" required>
@@ -119,7 +119,7 @@
                                     <td></td>
                                     <td>
                                         <div id="provide-warning">
-                                            <a href="#" title="Click for more information" rel="dialog">Why do I need to provide this?</a>
+                                            <a href="#" title="Click for more information" rel="dialog">Warum muss ich das angeben?</a>
                                         </div>
                                     </td>
                                 </tr>
@@ -128,7 +128,7 @@
                         <input type="hidden" id="referrer" name="referrer" value="116">
                         <input type="hidden" id="md5pass" name="md5pass" value="">
                         <div class="reg-btn clearfix">
-                            <button type="submit" class="sign-up-button">Sign Up</button>
+                            <button type="submit" class="sign-up-button">Registrieren</button>
                         </div>
                     </form>
                 </div>                   
@@ -152,11 +152,11 @@
         <div class="clearfix" id="footer-container">
             <div class="lfloat">
                 <div class="ui-text-subtitle">
-                    <span> Bluewire · This is a fan-made project and is not affiliated with Facebook.</span>
+                    <span> Bluewire ist ein Fanprojekt und hat keinerlei Verbindung zu Facebook (Meta Platforms, Inc.).</span>
                 </div>
             </div>
             <div class="ui-text-subtitle rfloat">
-                <a href="#" title="Experience Bluewire on the go.">Mobile</a> · <a href="#" title="About Bluewire">About</a> · <a href="#" title="Bluewire TOS">Terms</a> · <a href="#" title="Bluewire Privacy">Privacy</a> · <a href="#" title="Contact Bluewire">Contact</a> · <a href="" title="Put your Bluewire profile on your website!">Badges</a> · <a href="https://github.com/Bluewire-OSS" title="Bluewire's GitHub">GitHub</a> · <a href="https://discord.gg/EagXk2Pcfd" title="Bluewire's Discord">Discord</a>
+                <a href="#" title="Experience Bluewire on the go.">Mobile Version</a> · <a href="#" title="About Bluewire">Über Uns</a> · <a href="#" title="Bluewire TOS">Nutzungsbedingungen</a> · <a href="#" title="Bluewire Privacy">Datenschutz</a> · <a href="#" title="Contact Bluewire">Kontakt</a> · <a href="" title="Put your Bluewire profile on your website!">Badges</a> · <a href="https://github.com/Bluewire-OSS" title="Bluewire's GitHub">GitHub</a> · <a href="https://discord.gg/EagXk2Pcfd" title="Bluewire's Discord">Discord</a>
             </div>
         </div>
     </div>
@@ -176,22 +176,22 @@
 
     var defaultMonthOption = document.createElement('option');
     defaultMonthOption.value = "";
-    defaultMonthOption.text = "Month:";
+    defaultMonthOption.text = "Monat:";
     monthSelect.appendChild(defaultMonthOption);
 
     var defaultDayOption = document.createElement('option');
     defaultDayOption.value = "";
-    defaultDayOption.text = "Day:";
+    defaultDayOption.text = "Tag:";
     daySelect.appendChild(defaultDayOption);
 
     var defaultYearOption = document.createElement('option');
     defaultYearOption.value = "";
-    defaultYearOption.text = "Year:";
+    defaultYearOption.text = "Jahr:";
     yearSelect.appendChild(defaultYearOption);
 
     var months = [
-            "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-            "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"
+            "Januar", "Februar", "März", "April", "Mai", "Juni",
+            "Juli", "August", "September", "Oktober", "November", "Dezember"
     ];
 
     for (var index = 0; index < months.length; index++) {
