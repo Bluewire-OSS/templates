@@ -34,6 +34,10 @@ def language(lang_code):
 def languages():
     return render_template('languages.html')
 
+@app.route('/register')
+def register_template():
+    return render_template('register.html')
+
 @app.route('/api/register', methods=['POST'])
 def api_register():
     data = request.json

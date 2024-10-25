@@ -58,6 +58,16 @@ ul {
     height: 345px;
 }
 
+.content-register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: 100% 100%;
+    padding-top: 0;
+    margin: 0 auto;
+}
+
+
 .content-languages {
     display: flex;
     padding-top: 35px;
@@ -75,6 +85,13 @@ ul {
     padding: 0 12px;
     width: 964px;
     position: relative;
+}
+
+.content-area-register {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    padding: 75px 0 0 0;
 }
 
 .content-header {
@@ -131,8 +148,50 @@ ul {
     margin: 4px 0 0 15px;
 }
 
+#sign-up-content-register {
+    margin: 4px 0 0 15px;
+}
+
+#sign-up-content-register .sign-up-table {
+    margin: 0 0 7px 0;
+}
+
+#sign-up-content-register .label {
+    font-size: 11px;
+    color: #666;
+    font-weight: bold;
+    text-align: right;
+    padding-right: 3px;
+    width: 90px;
+}
+
+#sign-up-content-register .input-text, #sign-up-content-register .input-password {
+    width: 221px;
+    border: 1px solid #96a6c5;
+    margin-top: 2px;
+}
+
+#sign-up-content-register #provide-warning a {
+    font-size: 11px;
+    text-decoration: none;
+    color: #3b5998;
+}
+
+#sign-up-content-register #provide-warning {
+    font-size: 9px;
+    margin-left: 1px;
+}
+
 #sign-up-content .sign-up-table {
     margin: 0 0 7px 0;
+}
+
+#sign-up-content-register .sign-up-table {
+    margin: 0 0 7px 0;
+}
+
+#sign-up-content-register select {
+    margin: 2px 0 0 0;
 }
 
 #sign-up-content .label {
@@ -399,4 +458,45 @@ input + label {
     background-color: #f2f2f2;
     border-top: 1px solid #e5e5e5;
     border-radius: 0 0 4px 4px;
+}
+
+.top-area {
+    color: #333;
+	padding: 14px 0 0 17px;
+	border-top: 2px solid #d3dae6;
+    height: 66px;
+    width: 600px;
+}
+
+.text-headline {
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.text-tagline {
+	font-size: 11px;
+	margin-top: 4px;
+}
+
+.text-area {
+	margin-top: 6px;
+	width: 465px;
+	float: left;
+}
+
+.register-picture {
+	float: left;
+	margin: 0 15px 0 0;
+}
+
+.bottom-area {
+    display: flex;
+    color: #666;
+    border-top: 1px solid #d0d0d0;
+    padding-top: 15px;
+	background-color: #ededed;
+    justify-content: center;
+    width: 600px;
+    height: 223px;
+    margin-bottom: 20px;
 }
