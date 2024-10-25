@@ -196,29 +196,11 @@
             "lipiec", "sierpień", "wrzesień", "październik", "listopad", "grudzień"
     ];
 
-    for (var i = 2024-12; i > 1920; i--) {
-        var option = document.createElement('option');
-
-        option.value = index + 1;
-        option.text = `${i}`;
-
-        yearSelect.appendChild(option);
-    }
-
     for (var index = 0; index < months.length; index++) {
         var option = document.createElement('option');
         option.value = index + 1;
         option.text = months[index];
         monthSelect.appendChild(option);
-    }
-
-    for (var i = 1; i <= 31; i++) {
-        var option = document.createElement('option');
-
-        option.value = index + 1;
-        option.text = `${i}`;
-
-        daySelect.appendChild(option);
     }
 </script>
 </html>
