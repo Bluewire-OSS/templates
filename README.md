@@ -6,6 +6,15 @@ Welcome to the Bluewire template repository. These templates provide the pages f
 
 Feel free to explore and modify the templates as needed. However, please make sure to follow the license terms when making changes
 
+### Languages
+
+- `index.html` is English (US)
+- `index-pl.html` is Polski (PL)
+- `index-de.html` is Deutsch (DE)
+- `index-es.html` is Español (ES)
+- `index-ua.html` is Українська (UA)
+- `index-ro.html` is Română (RO)
+
 ## Structure
 
 - **`templates/`**: Contains the HTML templates that Flask uses to display pages.
