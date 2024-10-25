@@ -22,5 +22,9 @@ def romanian():
 def germany():
     return render_template('index-de.html')
 
+@app.route('/es')
+def spanish():
+    return render_template('index-es.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
