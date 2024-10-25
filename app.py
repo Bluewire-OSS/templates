@@ -26,5 +26,13 @@ def germany():
 def spanish():
     return render_template('index-es.html')
 
+@app.route('/hr')
+def croatian():
+    return render_template('index-hr.html')
+
+@app.route('/languages')
+def languages():
+    return render_template('languages.html')
+
 if __name__ == '__main__':
     app.run(debug=True)

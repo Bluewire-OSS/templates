@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='bluewire-favicon.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Welcome to Bluewire</title>
+</head>
+<body>
+    <div class="menubar">
+        <div class="menubar-items">
+            <img src="{{ url_for('static', filename='bluewire-string-logo.svg') }}" alt="Bluewire Logo" class="bluewire-logo">
+            <table cellpadding="0" cellspacing="0" class="navbar-table">
+                <tbody>
+                    <tr>
+                        <td class="login-form-label-field login-form-label-remember">
+                            <input type="checkbox" class="input-checkbox" value="1" id="persistent" name="persistent" tabindex="3">
+                            <label id="label-persistent" for="persistent">Keep me logged in</label>
+                        </td>
+                        <td class="login-form-label-field">
+                            <a href="/reset_password">Forgot your password?</a>
+                        </td>
+                        <td class="login-form-last-field login-form-label-field"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" class="input-text" title="Email" placeholder="Email" id="email" name="email" tabindex="1">
+                        </td>
+                        <td>
+                            <input type="password" class="input-password" id="pass" name="pass" value="" tabindex="2">
+                        </td>
+                        <td class="login-form-last-field">
+                            <div class="inner">
+                                <button class="login-button">Login</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>                  
+        </div>
+    </div>
+    <div class="sign-up-message">
+        <div class="sign-up-message-content">
+            <button class="sign-up-button-message">Sign Up</button>
+            <span>
+                Bluewire helps you connect and share with the people in your life.
+            </span>
+        </div>
+    </div>
+    <div class="content-languages">
+        <div class="content-area">
+            <div class="language-selection">
+                <h2 class="selection-title">Select Your Language</h2>
+                <div class="language-dialog">
+                    <div class="dialog-body"></div>
+                    <div class="dialog-buttons"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div id="content-curve"></div>
+        <div class="clearfix" id="footer-container">
+            <div class="lfloat">
+                <div class="ui-text-subtitle">
+                    <span> Bluewire · This is a fan-made project and is not affiliated with Facebook.</span>
+                </div>
+            </div>
+            <div class="ui-text-subtitle rfloat">
+                <a href="#" title="Experience Bluewire on the go.">Mobile</a> · <a href="#" title="About Bluewire">About</a> · <a href="#" title="Bluewire TOS">Terms</a> · <a href="#" title="Bluewire Privacy">Privacy</a> · <a href="#" title="Contact Bluewire">Contact</a> · <a href="" title="Put your Bluewire profile on your website!">Badges</a> · <a href="https://github.com/Bluewire-OSS" title="Bluewire's GitHub">GitHub</a> · <a href="https://discord.gg/EagXk2Pcfd" title="Bluewire's Discord">Discord</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
