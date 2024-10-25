@@ -119,7 +119,7 @@
                                     <td></td>
                                     <td>
                                         <div id="provide-warning">
-                                            <a href="#" title="Naciśnij, aby uzyskać więcej informacji" rel="dialog">Dlaczego ta informacja jest wymagana?</a>
+                                            <a href="#" title="Click for more information" rel="dialog">Dlaczego ta informacja jest wymagana?</a>
                                         </div>
                                     </td>
                                 </tr>
@@ -158,7 +158,7 @@
                 </div>
             </div>
             <div class="ui-text-subtitle rfloat">
-                <a href="#" title="Doświadcz Bluewire w podróży.">Mobile</a> · <a href="#" title="O Bluewire">O Bluewire</a> · <a href="#" title="Warunki korzystania z usługi Bluewire">Regulamin</a> · <a href="#" title="Polityka prywatności Bluewire">Prywatność</a> · <a href="#" title="Skontaktuj się z Bluewire">Pomoc</a> · <a href="" title="Osadź swoją wizytówkę na swojej stronie!">Wizytówki</a> · <a href="https://github.com/Bluewire-OSS" title="GitHub Bluewire">GitHub</a> · <a href="https://discord.gg/EagXk2Pcfd" title="Discord Bluewire">Discord</a>
+                <a href="#" title="Experience Bluewire on the go.">Mobile</a> · <a href="#" title="About Bluewire">O Bluewire</a> · <a href="#" title="Bluewire TOS">Regulamin</a> · <a href="#" title="Bluewire Privacy">Prywatność</a> · <a href="#" title="Contact Bluewire">Pomoc</a> · <a href="" title="Put your Bluewire profile on your website!">Wizytówki</a> · <a href="https://github.com/Bluewire-OSS" title="GitHub Bluewire">GitHub</a> · <a href="https://discord.gg/EagXk2Pcfd" title="Discord">Discord</a>
             </div>
         </div>
     </div>
@@ -192,33 +192,15 @@
     yearSelect.appendChild(defaultYearOption);
 
     var months = [
-            "styczeń", "luty", "marzec", "kwiecień", "maj", "czerwiec",
-            "lipiec", "sierpień", "wrzesień", "październik", "listopad", "grudzień"
+            "stycznia", "lutego", "marca", "kwietnia", "maja", "czerwca",
+            "lipca", "sierpnia", "wrzesień", "październik", "listopad", "grudzień"
     ];
-
-    for (var i = 2024-12; i > 1920; i--) {
-        var option = document.createElement('option');
-
-        option.value = index + 1;
-        option.text = `${i}`;
-
-        yearSelect.appendChild(option);
-    }
 
     for (var index = 0; index < months.length; index++) {
         var option = document.createElement('option');
         option.value = index + 1;
         option.text = months[index];
         monthSelect.appendChild(option);
-    }
-
-    for (var i = 1; i <= 31; i++) {
-        var option = document.createElement('option');
-
-        option.value = index + 1;
-        option.text = `${i}`;
-
-        daySelect.appendChild(option);
     }
 </script>
 </html>
