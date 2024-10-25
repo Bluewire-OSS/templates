@@ -1,5 +1,7 @@
 # Bluewire Templates
 
+![bwlogin](https://github.com/user-attachments/assets/a42ba89e-f0b3-4398-8765-025c8da2c2e5)
+
 Welcome to the Bluewire template repository. These templates provide the pages for Bluewire.
 
 Feel free to explore and modify the templates as needed. However, please make sure to follow the license terms when making changes
