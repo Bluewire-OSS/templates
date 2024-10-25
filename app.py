@@ -10,6 +10,10 @@ def index():
 def polish():
     return render_template('index-pl.html')
 
+@app.route('/hr')
+def croatian():
+    return render_template('index-hr.html')
+
 @app.route('/ua')
 def ukrainian():
     return render_template('index-ua.html')
