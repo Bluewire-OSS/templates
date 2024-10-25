@@ -14,6 +14,7 @@ Feel free to explore and modify the templates as needed. However, please make su
 - `index-es.html` is Español (ES)
 - `index-ua.html` is Українська (UA)
 - `index-ro.html` is Română (RO)
+- `index-hr.html` is Hrvatski (HR)
 
 ## Structure
 
