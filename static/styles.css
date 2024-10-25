@@ -186,7 +186,6 @@ select {
     font-size: 11px;
     font-weight: bold;
     line-height: normal !important;
-    padding: 3px 6px;
     text-align: center;
     vertical-align: middle;
     white-space: nowrap;
@@ -198,15 +197,28 @@ select {
 }
 
 .sign-up-button {
+    padding: 3px 6px;
     margin-bottom: 115px;
     margin-left: 100px;
 }
 
 .sign-up-button-message {
-    margin-bottom: 115px;
-    margin-left: 100px;
+    display: inline-block;
+    padding-top: 3px;
     width: 65px;
-    height: 25px;
+    font-size: 13px;
+    height: 21px;
+}
+
+.sign-up-message-actual-content {
+    width: 510px;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+.sign-up-message-span {
+    font-size: 13px;
+    margin-left: 7px;
 }
 
 #footer {
