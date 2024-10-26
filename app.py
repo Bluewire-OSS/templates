@@ -5,7 +5,7 @@ from datetime import datetime
 import re
 
 app = Flask(__name__)
-app.secret_key = 'skibiditoilet11'
+app.secret_key = 'YOUR_CUSTOM_SECRET_KEY_CAUSE_THIS_IS_UNSECURE'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
