@@ -94,8 +94,8 @@ document.addEventListener("DOMContentLoaded", function() {
                     if (xhr.readyState === 4) {
                         var data = JSON.parse(xhr.responseText);
 
-                        if (xhr.status === 200) {
-                            showAlert("Registration successful", "You can now log in.");
+                        if (xhr.status === 201) {
+                            showAlert("Sign up successful", "You may now log in. Redirecting to login page.");
                         } else {
                             showAlert("Registration failed", data.message || "Please check the entered details.");
                         }

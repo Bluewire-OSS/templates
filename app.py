@@ -46,8 +46,18 @@ def api_register():
         last_name = data['lastname']
         email = data['email']
         password = bcrypt.generate_password_hash(data['password']).decode('utf-8')
-        birthday = datetime.strptime(data['birthday'], '%Y-%m-%d').date()
         
+        try:
+            birthday = datetime.strptime(data['birthday'], '%Y-%m-%d').date()
+        except ValueError:
+            return jsonify({"message": "Invalid date provided for birthday."}), 400
+
+        today = datetime.today().date()
+        age = today.year - birthday.year - ((today.month, today.day) < (birthday.month, birthday.day))
+
+        if age < 13:
+            return jsonify({"message": "You must be at least 13 years old to register."}), 400
+
         if User.query.filter_by(email=email).first():
             return jsonify({"message": "Email is already registered."}), 409
 
@@ -84,8 +94,12 @@ def register():
         last_name = request.form['last_name']
         email = request.form['email']
         password = bcrypt.generate_password_hash(request.form['password']).decode('utf-8')
-        birthday = datetime.strptime(request.form['birthday'], '%Y-%m-%d').date()
         
+        try:
+            birthday = datetime.strptime(request.form['birthday'], '%Y-%m-%d').date()
+        except ValueError:
+            return "Invalid date provided for birthday."
+
         new_user = User(first_name=first_name, last_name=last_name, email=email, password=password, birthday=birthday)
         db.session.add(new_user)
         db.session.commit()
@@ -103,6 +117,7 @@ def login():
         if user and bcrypt.check_password_hash(user.password, password):
             session['user_id'] = user.id
             return redirect(url_for('index'))
+    return render_template('login.html')
 
 @app.route('/logout')
 def logout():
