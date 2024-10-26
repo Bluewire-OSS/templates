@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function showAlert(message, details) {
         var alertDiv = document.querySelector('.alert');
+        var alertwrapperDiv = document.querySelector('.alert-wrapper');
         
         if (!alertDiv) {
             console.error("Alert div with class 'alert' not found in the DOM.");
@@ -32,46 +33,49 @@ document.addEventListener("DOMContentLoaded", function() {
         errorParagraph.textContent = details;
         
         alertDiv.style.display = 'block';
+        alertwrapperDiv.style.display = 'flex';
     }
 
-    document.querySelector('.login-button').addEventListener('click', async function(event) {
+    document.querySelector('.login-button').addEventListener('click', function(event) {
         event.preventDefault();
         var email = document.getElementById('email').value;
         var password = document.getElementById('pass').value;
 
         if (email && password) {
-            try {
-                const response = await fetch('/api/login', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ email, password })
-                });
-                
-                const data = await response.json();
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', '/api/login', true);
+            xhr.setRequestHeader('Content-Type', 'application/json');
 
-                if (response.ok) {
-                    console.log("Login successful!" + data.message);
-                    window.location.href = '/'; 
-                } else {
-                    showAlert("Login unsuccessful", data.message || "Please check your credentials.");
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4) {
+                    var data = JSON.parse(xhr.responseText);
+
+                    if (xhr.status === 200) {
+                        console.log("Login successful!" + data.message);
+                        window.location.href = '/';
+                    } else {
+                        showAlert("Login unsuccessful", data.message || "Please check your credentials.");
+                    }
                 }
-            } catch (error) {
-                console.error("Error logging in:", error);
+            };
+
+            xhr.onerror = function() {
+                console.error("Error logging in");
                 showAlert("An error occurred", "Please try again later.");
-            }
+            };
+
+            xhr.send(JSON.stringify({ email: email, password: password }));
         } else {
             showAlert("Missing information", "Please enter both email and password.");
         }
     });
 
-    const signUpButton = document.querySelector('.sign-up-button');
+    var signUpButton = document.querySelector('.sign-up-button');
     if (signUpButton) {
-        signUpButton.addEventListener('click', async function(event) {
+        signUpButton.addEventListener('click', function(event) {
             event.preventDefault();
             console.log("Sign-up button clicked");
-            
+
             var firstname = document.getElementById('firstname').value;
             var lastname = document.getElementById('lastname').value;
             var regEmail = document.getElementById('reg-email').value;
@@ -82,33 +86,35 @@ document.addEventListener("DOMContentLoaded", function() {
             var year = document.getElementById('birthday-year').value;
 
             if (firstname && lastname && regEmail && regPassword && sex && month && day && year) {
-                try {
-                    const response = await fetch('/api/register', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({
-                            firstname,
-                            lastname,
-                            email: regEmail,
-                            password: regPassword,
-                            sex,
-                            birthday: `${year}-${month}-${day}`
-                        })
-                    });
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', '/api/register', true);
+                xhr.setRequestHeader('Content-Type', 'application/json');
 
-                    const data = await response.json();
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState === 4) {
+                        var data = JSON.parse(xhr.responseText);
 
-                    if (response.ok) {
-                        showAlert("Registration successful", "You can now log in.");
-                    } else {
-                        showAlert("Registration failed", data.message || "Please check the entered details.");
+                        if (xhr.status === 200) {
+                            showAlert("Registration successful", "You can now log in.");
+                        } else {
+                            showAlert("Registration failed", data.message || "Please check the entered details.");
+                        }
                     }
-                } catch (error) {
-                    console.error("Error signing up:", error);
+                };
+
+                xhr.onerror = function() {
+                    console.error("Error signing up");
                     showAlert("An error occurred", "Please try again later.");
-                }
+                };
+
+                xhr.send(JSON.stringify({
+                    firstname: firstname,
+                    lastname: lastname,
+                    email: regEmail,
+                    password: regPassword,
+                    sex: sex,
+                    birthday: year + '-' + month + '-' + day
+                }));
             } else {
                 showAlert("Missing information", "Please fill out all fields to sign up.");
             }
@@ -117,12 +123,14 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log("Sign-up button not found in the DOM");
     }
 
-    const buttonDone = document.querySelector('.button-done');
+    var buttonDone = document.querySelector('.button-done');
     if (buttonDone) {
         buttonDone.addEventListener('click', function() {
             var alertDiv = document.querySelector('.alert');
+            var alertwrapperDiv = document.querySelector('.alert-wrapper');
             if (alertDiv) {
                 alertDiv.style.display = 'none';
+                alertwrapperDiv.style.display = 'none';
             }
         });
     } else {
