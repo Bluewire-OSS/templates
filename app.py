@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for, session, j
 from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
 from datetime import datetime
+import re
 
 app = Flask(__name__)
 app.secret_key = 'skibiditoilet11'
@@ -94,16 +95,16 @@ def register():
         last_name = request.form['last_name']
         email = request.form['email']
         password = bcrypt.generate_password_hash(request.form['password']).decode('utf-8')
-        
+
         try:
             birthday = datetime.strptime(request.form['birthday'], '%Y-%m-%d').date()
         except ValueError:
-            return "Invalid date provided for birthday."
+            return "Invalid date provided for birthday. Please enter a valid birthday."
 
         new_user = User(first_name=first_name, last_name=last_name, email=email, password=password, birthday=birthday)
         db.session.add(new_user)
         db.session.commit()
-        
+         
         session['user_id'] = new_user.id
         return redirect(url_for('index'))
 
