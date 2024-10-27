@@ -2,9 +2,9 @@
 
 ![bwlogin](https://github.com/user-attachments/assets/a42ba89e-f0b3-4398-8765-025c8da2c2e5)
 
-Welcome to the Bluewire template repository. These templates provide the pages for Bluewire.
+Welcome to the Bluewire template repository. These templates provide the pages and API (app.py) for Bluewire.
 
-Feel free to explore and modify the templates as needed. However, please make sure to follow the license terms when making changes
+Feel free to explore and modify the templates if you want. However, please make sure to follow the Bluewire design language when making changes.
 
 ### Languages
 
@@ -19,9 +19,9 @@ Feel free to explore and modify the templates as needed. However, please make su
 ## Structure
 
 - **`templates/`**: Contains the HTML templates that Flask uses to display pages.
-- **`static/`**: Contains static assets such as image files, CSS etc.
+- **`static/`**: Contains static assets such as images, CSS, JavaScript etc.
 
-To run this, install Flask from pip and run **`app.py`**.
+To run this, install **`flask flask_bcrypt flask_sqlalchemy`** from pip and run **`app.py`**.
 
 ### License
 
