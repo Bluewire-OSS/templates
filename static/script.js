@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function() {
             console.log("Sign-up button clicked");
 
             var firstname = document.getElementById('firstname').value;
-            var lastname = document.getElementById('lastname').value; // This can be empty now
+            var lastname = document.getElementById('lastname').value;
             var regEmail = document.getElementById('reg-email').value;
             var regPassword = document.getElementById('reg-passwd').value;
             var sex = document.getElementById('sex').value;
