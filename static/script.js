@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function() {
             console.log("Sign-up button clicked");
 
             var firstname = document.getElementById('firstname').value;
-            var lastname = document.getElementById('lastname').value;
+            var lastname = document.getElementById('lastname').value; // This can be empty now
             var regEmail = document.getElementById('reg-email').value;
             var regPassword = document.getElementById('reg-passwd').value;
             var sex = document.getElementById('sex').value;
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function() {
             var day = document.getElementById('birthday-day').value;
             var year = document.getElementById('birthday-year').value;
 
-            if (firstname && lastname && regEmail && regPassword && sex && month && day && year) {
+            if (firstname && regEmail && regPassword && sex && month && day && year) {
                 var xhr = new XMLHttpRequest();
                 xhr.open('POST', '/api/register', true);
                 xhr.setRequestHeader('Content-Type', 'application/json');
@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 xhr.send(JSON.stringify({
                     firstname: firstname,
-                    lastname: lastname,
+                    lastname: lastname || '',
                     email: regEmail,
                     password: regPassword,
                     sex: sex,
