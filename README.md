@@ -21,7 +21,7 @@ Feel free to explore and modify the templates if you want. However, please make 
 - **`templates/`**: Contains the HTML templates that Flask uses to display pages.
 - **`static/`**: Contains static assets such as images, CSS, JavaScript etc.
 
-To run this, install **`flask flask_bcrypt flask_sqlalchemy`** from pip and run **`app.py`**.
+To run this, install **`flask flask_bcrypt flask_sqlalchemy Flask-WTF`** from pip and run **`app.py`**.
 
 ### License
 
