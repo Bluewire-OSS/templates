@@ -35,7 +35,7 @@ def index():
 def language(lang_code):
     supported_languages = ['pl', 'ua', 'ro', 'de', 'es', 'hr']
     if lang_code in supported_languages:
-        return render_template(f'index-{lang_code}.html')
+        return render_template(f'/translations/index/index-{lang_code}.html')
     return render_template('languages.html')
 
 @app.route('/languages')

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='bluewire-favicon.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>Bienvenido a Bluewire</title>
+</head>
+<body>
+    <div class="menubar">
+        <div class="menubar-items">
+            <a href="/"><img src="{{ url_for('static', filename='bluewire-string-logo.svg') }}" alt="Bluewire Logo" class="bluewire-logo"></a>
+            <table cellpadding="0" cellspacing="0" class="navbar-table">
+                <tbody>
+                    <tr>
+                        <td class="login-form-label-field login-form-label-remember">
+                            <input type="checkbox" class="input-checkbox" value="1" id="persistent" name="persistent" tabindex="3">
+                            <label id="label-persistent" for="persistent">Mantener mi sesión iniciada</label>
+                        </td>
+                        <td class="login-form-label-field">
+                            <a href="/reset_password">¿Olvidaste tu contraseña?</a>
+                        </td>
+                        <td class="login-form-last-field login-form-label-field"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" class="input-text" title="Email" placeholder="Email" id="email" name="email" tabindex="1">
+                        </td>
+                        <td>
+                            <input type="password" class="input-password" id="pass" name="pass" value="" tabindex="2">
+                        </td>
+                        <td class="login-form-last-field">
+                            <div class="inner">
+                                <button class="login-button">Inciar sesión</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>                  
+        </div>
+    </div>
+    <div class="content">
+        <div class="content-area">
+            <div class="content-left">
+                <h3 class="content-header">Bluewire te ayuda a conectar y compartir con<br>la gente en tu vida.</h3>
+                <div class="content-map"></div>
+            </div>
+            <div class="content-right">
+                <div class="sign-up-header">
+                    <div class="sign-up-headline">Crear cuenta</div>
+                    <div class="sign-up-tagline">Es gratis y se puede unir cualquiera</div>
+                </div>
+                <div id="sign-up-content">
+                    <form id="sign-up-form">
+                        <table class="sign-up-table">
+                            <tbody>
+                                <tr>
+                                    <td class="label"><label for="firstname">Nombre:</label></td>
+                                    <td>
+                                        <div class="field-container">
+                                            <input type="text" class="input-text" id="firstname" name="firstname" value="" required>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="label"><label for="lastname">Apellido:</label></td>
+                                    <td>
+                                        <div class="field-container">
+                                            <input type="text" class="input-text" id="lastname" name="lastname" value="" required>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="label"><label for="reg-email">Tu Email:</label></td>
+                                    <td>
+                                        <div class="field-container">
+                                            <input type="email" class="input-text" id="reg-email" name="reg-email" value="" required>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="label"><label for="reg-passwd">Nueva contraseña:</label></td>
+                                    <td>
+                                        <div class="field-container">
+                                            <input type="password" class="input-password" id="reg-passwd" name="reg-passwd" value="" required>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="label"><label for="sex">Yo soy:</label></td>
+                                    <td>
+                                        <div class="field-container">
+                                            <select class="select" name="sex" id="sex" required>
+                                                <option value="0">Selecciona género:</option>
+                                                <option value="1">Mujer</option>
+                                                <option value="2">Hombre</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="label"><label for="birthday-month">Fecha de nacimiento:</label></td>
+                                    <td>
+                                        <div class="field-container">
+                                            <select id="birthday-month" name="birthday-month" required>
+                                                <!-- Dynamically filled in -->
+                                            </select>
+                                            <select id="birthday-day" name="birthday-day" required>
+                                                <!-- Dynamically filled in -->
+                                            </select>
+                                            <select id="birthday-year" name="birthday-year" required>
+                                                <!-- Dynamically filled in -->
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>
+                                        <div id="provide-warning">
+                                            <a href="#" title="Click for more information" rel="dialog">¿Por qué necesito decir esto?</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <input type="hidden" id="referrer" name="referrer" value="116">
+                        <input type="hidden" id="md5pass" name="md5pass" value="">
+                        <div class="reg-btn clearfix">
+                            <button type="submit" class="sign-up-button">Crear cuenta</button>
+                        </div>
+                    </form>
+                </div>                   
+            </div>
+        </div>
+    </div>
+    <div class="welcome-useragent">
+        <div class="language">
+            <ul>
+                <li><a href="/">English (US)</a></li>
+                <li><a href="/pl">Polski (PL)</a></li>
+                <li><a href="/de">Deutsch (DE)</a></li>
+                <li><a href="/es">Español (ES)</a></li>
+                <li><a href="/ua">Українська (UA)</a></li>
+                <li><a href="/ro">Română (RO)</a></li>
+                <li><a href="/languages" class="more-langs">»</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div id="content-curve"></div>
+        <div class="clearfix" id="footer-container">
+            <div class="lfloat">
+                <div class="ui-text-subtitle">
+                    <span> Bluewire · Este es un proyecto creado por fans y no está afiliado a Facebook..</span>
+                </div>
+            </div>
+            <div class="ui-text-subtitle rfloat">
+                <a href="#" title="Experience Bluewire on the go.">Mobile</a> · <a href="#" title="Sobre Bluewire">About</a> · <a href="#" title="Bluewire TOS">Terms</a> · <a href="#" title="Bluewire Privacy">Privacy</a> · <a href="#" title="Contact Bluewire">Contact</a> · <a href="" title="Put your Bluewire profile on your website!">Badges</a> · <a href="https://github.com/Bluewire-OSS" title="Bluewire's GitHub">GitHub</a> · <a href="https://discord.gg/EagXk2Pcfd" title="Bluewire's Discord">Discord</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="alert-wrapper" style="display: none;">
+        <div class="alert">
+            <div class="top-area-dialog">
+                <h2 class="text-alert">errorMessage</h2>
+            </div>
+            <div class="bottom-area-dialog">
+                <p class="error-paragraph">errorDetails</p>
+                <button class="button-done">OK</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+<script>
+    var monthSelect = document.getElementById('birthday-month');
+    var daySelect = document.getElementById('birthday-day');
+    var yearSelect = document.getElementById('birthday-year');
+
+    for (var i = 0; i < monthSelect.options.length; i++) {
+        if (monthSelect.options[i].value === "") {
+            monthSelect.remove(i);
+            break;
+        }
+    }
+
+    var defaultMonthOption = document.createElement('option');
+    defaultMonthOption.value = "";
+    defaultMonthOption.text = "Month:";
+    monthSelect.appendChild(defaultMonthOption);
+
+    var defaultDayOption = document.createElement('option');
+    defaultDayOption.value = "";
+    defaultDayOption.text = "Day:";
+    daySelect.appendChild(defaultDayOption);
+
+    var defaultYearOption = document.createElement('option');
+    defaultYearOption.value = "";
+    defaultYearOption.text = "Year:";
+    yearSelect.appendChild(defaultYearOption);
+
+    var months = [
+            "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+            "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"
+    ];
+
+    for (var index = 0; index < months.length; index++) {
+        var option = document.createElement('option');
+        option.value = index + 1;
+        option.text = months[index];
+        monthSelect.appendChild(option);
+    }
+</script>
+</html>
