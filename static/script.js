@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             xhr.send(JSON.stringify({ email: email, password: password }));
         } else {
-            showAlert("Missing information", "Please enter both email and password.");
+            window.location.href = "/login";
         }
     });
 

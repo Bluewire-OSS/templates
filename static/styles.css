@@ -67,6 +67,12 @@ ul {
     margin: 0 auto;
 }
 
+.content-stuff-login {
+    width: 642px;
+    height: 253.5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
 
 .content-languages {
     display: flex;
@@ -468,6 +474,13 @@ input + label {
     width: 600px;
 }
 
+.top-area-login {
+    color: #333;
+	padding: 14px 0 0 17px;
+    height: 34.5px;
+    width: 600px;
+}
+
 .text-headline {
 	font-size: 15px;
 	font-weight: bold;
@@ -498,6 +511,17 @@ input + label {
     justify-content: center;
     width: 600px;
     height: 223px;
+    margin-bottom: 20px;
+}
+
+.bottom-area-login {
+    display: flex;
+    color: #666;
+    border-top: 1px solid #d0d0d0;
+    padding-top: 15px;
+    justify-content: center;
+    width: 600px;
+    height: 177px;
     margin-bottom: 20px;
 }
 
@@ -560,4 +584,9 @@ input + label {
     border: 1px solid #ccc;
     color: #000;
     box-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+}
+
+.header-login {
+    color: #1c2a47;
+    font-size: 16px;
 }

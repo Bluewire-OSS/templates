@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='bluewire-favicon.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>Login | Bluewire</title>
+</head>
+<body>
+    <div class="menubar">
+        <div class="menubar-items">
+            <a href="/"><img src="{{ url_for('static', filename='bluewire-string-logo.svg') }}" alt="Bluewire Logo" class="bluewire-logo"></a>                
+        </div>
+    </div>
+    <div class="sign-up-message">
+        <div class="sign-up-message-content">
+            <div class="sign-up-message-actual-content">
+                <a class="sign-up-button-message" href="/register">Sign Up</a>
+                <span class="sign-up-message-span">
+                    Bluewire helps you connect and share with the people in your life.
+                </span>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div id="content-curve"></div>
+        <div class="clearfix" id="footer-container">
+            <div class="lfloat">
+                <div class="ui-text-subtitle">
+                    <span> Bluewire · This is a fan-made project and is not affiliated with Facebook.</span>
+                </div>
+            </div>
+            <div class="ui-text-subtitle rfloat">
+                <a href="#" title="Experience Bluewire on the go.">Mobile</a> · <a href="#" title="About Bluewire">About</a> · <a href="#" title="Bluewire TOS">Terms</a> · <a href="#" title="Bluewire Privacy">Privacy</a> · <a href="#" title="Contact Bluewire">Contact</a> · <a href="" title="Put your Bluewire profile on your website!">Badges</a> · <a href="https://github.com/Bluewire-OSS" title="Bluewire's GitHub">GitHub</a> · <a href="https://discord.gg/EagXk2Pcfd" title="Bluewire's Discord">Discord</a>
+            </div>
+        </div>
+    </div>
+    <div class="content-register">
+        <div class="content-area-register">
+            <div class="content-stuff-login">
+                <div class="top-area-login">
+                    <h2 class="header-login">Bluewire Login</h2>
+                </div>
+                <div class="bottom-area-login">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="alert-wrapper" style="display: none;">
+        <div class="alert">
+            <div class="top-area-dialog">
+                <h2 class="text-alert">errorMessage</h2>
+            </div>
+            <div class="bottom-area-dialog">
+                <p class="error-paragraph">errorDetails</p>
+                <button class="button-done">OK</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
