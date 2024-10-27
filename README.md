@@ -4,6 +4,8 @@
 
 Welcome to the Bluewire template repository. These templates provide the pages and API (app.py) for Bluewire.
 
+You can selfhost Bluewire! Make sure to change the secret key in `app.py` if you plan to make it public.
+
 Feel free to explore and modify the templates if you want. However, please make sure to follow the Bluewire design language when making changes.
 
 ### Languages
