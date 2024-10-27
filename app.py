@@ -22,7 +22,7 @@ login_cooldowns = {}
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     first_name = db.Column(db.String(50), nullable=False)
-    last_name = db.Column(db.String(50), nullable=False)
+    last_name = db.Column(db.String(50), nullable=True)
     email = db.Column(db.String(120), unique=True, nullable=False)
     password = db.Column(db.String(128), nullable=False)
     birthday = db.Column(db.Date, nullable=False)
@@ -51,7 +51,7 @@ def api_register():
     data = request.json
     try:
         first_name = data['firstname']
-        last_name = data['lastname']
+        last_name = data.get('lastname')
         email = data['email']
         password = data['password']
 
@@ -120,7 +120,7 @@ def api_logout():
 def register():
     if request.method == 'POST':
         first_name = request.form['first_name']
-        last_name = request.form['last_name']
+        last_name = request.form.get('last_name')
         email = request.form['email']
         password = request.form['password']
 
