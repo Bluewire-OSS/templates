@@ -36,7 +36,6 @@ document.addEventListener("DOMContentLoaded", function() {
         alertwrapperDiv.style.display = 'flex';
     }
 
-    // Get CSRF token from the meta tag or a hidden input
     var csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 
     document.querySelector('.login-button').addEventListener('click', function(event) {
@@ -48,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function() {
             var xhr = new XMLHttpRequest();
             xhr.open('POST', '/api/login', true);
             xhr.setRequestHeader('Content-Type', 'application/json');
-            xhr.setRequestHeader('X-CSRFToken', csrfToken); // Include CSRF token
+            xhr.setRequestHeader('X-CSRFToken', csrfToken);
 
             xhr.onreadystatechange = function() {
                 if (xhr.readyState === 4) {
@@ -93,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 var xhr = new XMLHttpRequest();
                 xhr.open('POST', '/api/register', true);
                 xhr.setRequestHeader('Content-Type', 'application/json');
-                xhr.setRequestHeader('X-CSRFToken', csrfToken); // Include CSRF token
+                xhr.setRequestHeader('X-CSRFToken', csrfToken);
 
                 xhr.onreadystatechange = function() {
                     if (xhr.readyState === 4) {
