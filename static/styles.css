@@ -425,12 +425,26 @@ input + label {
     width: 600px;
     height: 473px;
     border: 1px solid #cfcfcf;
+    margin: 0 auto
 }
 
 .language-selection .selection-title {
     color: #fff;
     font-size: 14px;
     font-weight: bold;
+}
+
+.selection-title {
+    background-color: #6d84b4;
+    border: 1px solid #3b5998;
+    border-bottom: none;
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+.selection-title span {
+    display: block;
+    padding: 5px 10px;
 }
 
 .language-dialog {
@@ -589,4 +603,8 @@ input + label {
 .header-login {
     color: #1c2a47;
     font-size: 16px;
+}
+
+.lang-link {
+    font-size: 12px;
 }
