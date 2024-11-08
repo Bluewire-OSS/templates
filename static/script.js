@@ -53,7 +53,7 @@ $(document).ready(function() {
                 success: function(data, status, xhr) {
                     if (xhr.status === 200) {
                         console.log("Login successful!" + data.message);
-                        window.location.href = '/';
+                        window.location.href = '/home';
                     } else {
                         showAlert("Login unsuccessful", data.message || "Please check your credentials.");
                     }
