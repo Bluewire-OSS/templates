@@ -60,16 +60,16 @@ ul {
 
 .content-register {
     display: flex;
-    justify-content: center;
     align-items: center;
     background-size: 100% 100%;
     padding-top: 0;
     margin: 0 auto;
+    padding-bottom: 55px;
 }
 
 .content-stuff-login {
-    width: 642px;
-    height: 253.5;
+    width: 640px;
+    height: 300px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
@@ -531,7 +531,7 @@ input + label {
     color: #666;
     border-top: 1px solid #d0d0d0;
     padding-top: 15px;
-    width: 600px;
+    width: 578px;
     height: 177px;
     margin: 0 auto;
     margin-bottom: 20px;
