@@ -94,9 +94,8 @@ ul {
 }
 
 .content-area-register {
-    display: flex;
+    display: block;
     margin: 0 auto;
-    justify-content: center;
     padding: 75px 0 0 0;
 }
 
@@ -270,9 +269,8 @@ select {
 .sign-up-button-message {
     display: inline-block;
     padding-top: 3px;
-    width: 65px;
+    padding: 3px 6px;
     font-size: 13px;
-    height: 21px;
 }
 
 .sign-up-message-actual-content {
@@ -528,6 +526,7 @@ input + label {
 }
 
 .bottom-area-login {
+    font-size: 11px;
     color: #666;
     border-top: 1px solid #d0d0d0;
     padding-top: 15px;
@@ -622,4 +621,73 @@ input + label {
     color: #333;
     margin: 0;
     padding: 0;
+}
+
+.login-form-content {
+	clear: left;
+	margin: auto;
+	padding: 15px 0;
+	text-align: left;
+	width: 380px;
+}
+
+.login-row {
+    display: block;
+	padding: 0 0 8px 0;
+	text-align: left;
+}
+
+.login-row label {
+	display: block;
+	float: left;
+	padding: 3px 0;
+	width: 100px;
+    cursor: pointer;
+	color: #666;
+	font-weight: bold;
+    font-size: 11px;
+}
+
+.login-row input {
+    width: 175px;
+}
+
+.persistent {
+	color: #333;
+	display: block;
+	font-size: 11px;
+	font-weight: normal;
+	line-height: 16px;
+	padding: 3px 0 3px 100px;
+}
+
+#login-buttons {
+	padding: 5px 0 0 100px;
+	text-align: left;
+}
+
+.large-button {
+    padding: 3px 6px;
+    font-size: 13px;
+}
+
+.reset-password-paragraph {
+    padding-left: 100px;
+}
+
+.linear-language li {
+    font-size: 11px;
+	display: inline;
+	float: left;
+	direction: ltr;
+	padding: 10px 11px 0 0;
+	margin: 0;
+	white-space: nowrap;
+}
+
+.linear_language ul {
+	display: inline;
+    list-style-type: none;
+	margin: 0;
+	padding: 0;
 }

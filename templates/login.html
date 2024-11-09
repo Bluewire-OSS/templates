@@ -34,8 +34,39 @@
                     <div class="warning-message-container">
                         <h2 class="warning-message-login">You must log in to see this page.</h2>
                     </div>
+                    <div class="login-form-content">
+                        <div class="login-row">
+                            <label id="label-email" for="email">Email:</label>
+                            <input id="email" class="input-text" type="text" name="email">
+                        </div>
+                        <div class="login-row">
+                            <label id="label-password" for="password">Password:</label>
+                            <input id="password" class="input-text" type="text" name="password">
+                        </div>
+                        <label class="persistent">
+                            <input type="checkbox" class="input-checkbox " id="persistent-checkbox" name="persistent" value="1">
+                            <span id="persistent-login-span">Keep me logged in</span>
+                        </label>
+                        <div id="login-buttons" class="login-row">
+                            <button class="login-button large-button">Login</button> 
+                            or
+                            <strong><a class="login-link-sign-up" href="/register">Sign up for Bluewire</a></strong>
+                        </div>
+                        <p class="login-row reset-password-paragraph"><a href="/reset-pass">Forgot your password?</a></p>
+                    </div>
                 </div>
             </div>
+            <div class="linear-language">
+                <ul>
+                  <li><a href="/">English (US)</a></li>
+                  <li><a href="/pl">Polski (PL)</a></li>
+                  <li><a href="/de">Deutsch (DE)</a></li>
+                  <li><a href="/es">Español (ES)</a></li>
+                  <li><a href="/ua">Українська (UA)</a></li>
+                  <li><a href="/ro">Română (RO)</a></li>
+                  <li class="more-langs"><a href="/languages">»</a></li>
+                </ul>
+            </div>                     
         </div>
     </div>
     <div id="footer">
